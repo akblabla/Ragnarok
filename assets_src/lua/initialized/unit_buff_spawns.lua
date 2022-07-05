@@ -3,7 +3,7 @@ local OldBuffSpawns = require "wargroove/unit_buff_spawns"
 
 local BuffSpawns = {}
 function BuffSpawns.init()
-	OldBuffSpawns.getBuffSpawns().crown = BuffSpawns.crown
+	-- OldBuffSpawns.getBuffSpawns().crown = BuffSpawns.crown
 end
 function BuffSpawns.crown(Wargroove, unit)
 	print("Buffspawn crown starts here")

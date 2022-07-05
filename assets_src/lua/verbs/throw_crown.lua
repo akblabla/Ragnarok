@@ -7,9 +7,6 @@ local throwCrown = Verb:new()
 local stateKey = "crown"
 
 function throwCrown:getMaximumRange(unit, endPos)
-	if unit.unitClassId == "commander_vesper" then
-		return 2
-	end
     return 1
 end
 

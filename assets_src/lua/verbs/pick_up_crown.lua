@@ -7,9 +7,6 @@ local handOverCrown = Verb:new()
 local stateKey = "crown"
 
 function handOverCrown:getMaximumRange(unit, endPos)
-	if unit.unitClassId == "commander_vesper" then
-		return 2
-	end
     return 1
 end
 
@@ -25,10 +22,7 @@ end
 function handOverCrown:canExecuteWithTarget(unit, endPos, targetPos, strParam)    
 	local crownPosition = Ragnarok.getCrownPos()
 	if crownPosition == nil then return false end
-	if unit.unitClassId == "commander_vesper" then
-		return targetPos.x == crownPosition.x and targetPos.y == crownPosition.y
-	end
-    return endPos.x == crownPosition.x and endPos.y == crownPosition.y
+    return targetPos.x == crownPosition.x and targetPos.y == crownPosition.y
 end
 
 local crownAnimation = "ui/icons/fx_crown"
