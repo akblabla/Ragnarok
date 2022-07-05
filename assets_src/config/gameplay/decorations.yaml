@@ -1,0 +1,70 @@
+---
+# List of Layer Types:
+# base - drawn at the base layer, underneath mountains and rivers [grass effects, etc]
+# ground - drawn below all units [flowers, rocks, etc.]
+# units - sort together with units, base on the Y position, same as trees [flags etc.]
+# sky - draws on top of all units [Clouds...?]
+
+decorations:
+  - id: shrub 
+    layer: units
+    animation:
+      grass: decoration/unit/shrub
+      ice: decoration/unit/shrub
+      desert: decoration/unit/shrub
+      volcano: decoration/unit/shrub    
+  - id: shrub2 
+    layer: units
+    animation:
+      grass: decoration/unit/shrub2
+      ice: decoration/unit/shrub2
+      desert: decoration/unit/shrub2
+      volcano: decoration/unit/shrub2
+  - id: shipExterior 
+    layer: ground
+    snapToGrid: true
+    animation:
+      grass: decoration/unit/shipExterior
+      ice: decoration/unit/shipExterior
+      desert: decoration/unit/shipExterior
+      volcano: decoration/unit/shipExterior   
+  - id: shipForeground
+    layer: units
+    snapToGrid: true
+    animation:
+      grass: decoration/unit/shipForeground
+      ice: decoration/unit/shipForeground
+      desert: decoration/unit/shipForeground
+      volcano: decoration/unit/shipForeground   
+  - id: shipBridge
+    layer: units
+    animation:
+      grass: decoration/unit/shipBridge
+      ice: decoration/unit/shipBridge
+      desert: decoration/unit/shipBridge
+      volcano: decoration/unit/shipBridge   
+  - id: solidBarrel
+    layer: units
+    animation:
+      grass: decoration/unit/solidBarrel
+      ice: decoration/unit/solidBarrel
+      desert: decoration/unit/solidBarrel
+      volcano: decoration/unit/solidBarrel   
+  - id: pirateShipExterior
+    layer: ground
+    snapToGrid: true
+    animation:
+      grass: decoration/unit/pirateShipExterior
+      ice: decoration/unit/pirateShipExterior
+      desert: decoration/unit/pirateShipExterior
+      volcano: decoration/unit/pirateShipExterior   
+  - id: pirateShipForeground
+    layer: units
+    snapToGrid: true
+    animation:
+      grass: decoration/unit/pirateShipForeground
+      ice: decoration/unit/pirateShipForeground
+      desert: decoration/unit/pirateShipForeground
+      volcano: decoration/unit/pirateShipForeground   
+
+...

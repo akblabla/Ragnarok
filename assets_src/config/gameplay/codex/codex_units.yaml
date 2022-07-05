@@ -1,0 +1,37 @@
+---
+codex:
+
+- id: unit_soldier_outlaws
+  category: units
+  faction: cherrystone
+  name: unit_name_soldier_outlaws
+  icon:
+    image: units/soldier/outlaws/portrait_soldier_outlaws_small.png
+    paletteSwap: true
+    colour: cyan
+    skinColour: typeIV
+  pages:
+  - pageType: description
+    layoutType: unit_sprite
+    unitClass: soldier
+    faction: cherrystone
+    title: unit_name_soldier_outlaws
+    text: codex_unit_soldier_cherrystone_lore_text
+  - pageType: strategy
+    layoutType: unit_sprite
+    unitClass: soldier
+    faction: cherrystone
+    title: unit_name_soldier_outlaws
+    text: codex_unit_soldier_critical_text
+  - pageType: stats
+    layoutType: animation
+    animation: ui/codex/content/unit_soldiercrit
+    title: unit_name_soldier_outlaws
+    text: unit_description_soldier
+    unitClass: soldier
+  - pageType: matrix
+    layoutType: no_image
+    title: ui_codex_damage_matrix
+    unitClass: soldier
+
+...
