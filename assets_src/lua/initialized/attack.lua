@@ -64,7 +64,7 @@ function Attack:canExecuteWithTarget(unit, endPos, targetPos, strParam)
 	if Ragnarok.cantAttackBuildings(unit.playerId) and targetUnit.unitClass.isStructure then
 		return false
 	end
-
+	if Ragnarok.hasCrown(unit) then return false end
 	local isGround = false
 	for i, tag in ipairs(unit.unitClass.tags) do
 		for i, groundTag in ipairs(Ragnarok.groundTags) do

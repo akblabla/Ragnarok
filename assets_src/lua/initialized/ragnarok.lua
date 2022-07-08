@@ -61,6 +61,10 @@ function Ragnarok.getCrownPos()
 	return nil
 end
 
+function Ragnarok.hasCrown(unit)
+	return crownBearerID and crownBearerID == unit.id 
+end
+
 function Ragnarok.removeCrown()
 	local crown = Wargroove.getUnitById(crownID)
 	if crown ~= nil then
@@ -91,6 +95,7 @@ function Ragnarok.dropCrown(playerId,targetPos)
     table.insert(startingState, pos)
 	crownID = Wargroove.spawnUnit(playerId, {x = -100, y = -100}, "crown", false, "", startingState)
 	crownPos = targetPos
+	crownBearerID = nil
 	return crownID
 end
 

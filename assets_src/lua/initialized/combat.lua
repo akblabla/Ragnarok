@@ -101,6 +101,12 @@ function Combat:getDamage(attacker, defender, solveType, isCounter, attackerPos,
 
 	local passiveMultiplier = self:getPassiveMultiplier(effectiveAttacker, defender, attackerPos, defenderPos, attackerPath, isCounter, attacker.state)
 	attackerEffectiveness = attackerEffectiveness * passiveMultiplier
+	
+	--Units can't attack while holding the crown. Thank you Skydorm for the suggestion
+--	Wargroove.popUnitPos()
+	if Ragnarok.hasCrown(attacker) then return nil, false end
+	-- local e0 = self:getEndPosition(attackerPath, attacker.pos)
+	-- Wargroove.pushUnitPos(attacker, e0)
 
 	local defenderUnitClass = Wargroove.getUnitClass(defender.unitClassId)
 	local defenderIsInAir = defenderUnitClass.inAir

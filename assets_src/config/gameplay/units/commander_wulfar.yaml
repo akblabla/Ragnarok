@@ -218,25 +218,6 @@ units:
     alternativeRuns:
       - id: emote_carrying_walk
 
-    hidden:
-      emotes:
-        - dark_wulfar_handshake_1
-        - dark_wulfar_handshake_2
-        - dark_wulfar_handshake_3
-        - dark_wulfar_handshake_4
-        - handshake_1
-        - handshake_2
-        - handshake_3
-        - rope
-        - cactus
-        - bush
-        - bush2
-        - bush3
-        - grab
-      shouts:
-        - wulfar_attack2
-        - wulfar_attack5
-
 
 
 

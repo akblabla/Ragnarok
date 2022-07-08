@@ -23,10 +23,11 @@ commanders:
     name: character_flagship_rival_name
     title: character_flagship_rival_title
     faction: outlaw
+    playable: false
     portrait:
-      neutral: portraits/commanders/small/outlaw_portrait_small.png
-      happy: portraits/commanders/small/outlaw_portrait_small.png
-      sad: portraits/commanders/small/outlaw_portrait_small.png
+      neutral: portraits/commanders/small/soldier_portrait_extra.png
+      happy: portraits/commanders/small/soldier_portrait_extra.png
+      sad: portraits/commanders/small/soldier_portrait_extra.png
     cutscenePortrait: portraits/commanders/big/outlaw_portrait
     portraitOffset: [0, 20]
     themeSong: music/hostile
@@ -34,4 +35,67 @@ commanders:
     unitClassId: commander_flagship_rival
     dialogueBoxVoice: ui/dialogue/textScroll
 
+  - id: generic_soldier
+    name: character_generic_soldier_name
+    faction: cherrystone
+    playable: false
+    portrait:
+        extra: portraits/commanders/small/soldier_portrait_extra.png
+        happy: portraits/commanders/small/soldier_portrait_happy.png
+        neutral: portraits/commanders/small/soldier_portrait_small.png
+        sad: portraits/commanders/small/soldier_portrait_sad.png
+    cutscenePortrait: portraits/commanders/big/cherrystone_portrait
+    portraitOffset: [0, 20]
+    themeSong: music/hostile
+    skinColour: typeVI
+    unitClassId: knight
+    dialogueBoxVoice: ui/dialogue/textScroll
+
+  - id: generic_soldier2
+    name: character_generic_soldier2_name
+    faction: heavensong
+    playable: false
+    portrait:
+        extra: portraits/commanders/small/floran_soldier_portrait.png
+        happy: portraits/commanders/small/soldier2_portrait_happy.png
+        neutral: portraits/commanders/small/soldier2_portrait_small.png
+        sad: portraits/commanders/small/felheim_soldier_portrait.png
+    cutscenePortrait: portraits/commanders/big/cherrystone_portrait
+    portraitOffset: [0, 20]
+    themeSong: music/hostile
+    skinColour: typeII
+    unitClassId: knight
+    dialogueBoxVoice: ui/dialogue/textScroll
+
+  - id: generic_soldier3
+    name: character_generic_soldier3_name
+    faction: cherrystone
+    playable: false
+    portrait:
+        happy: portraits/commanders/small/merfolk_portrait.png
+        neutral: portraits/commanders/small/mage_portrait.png
+        sad: portraits/commanders/small/thief_portrait.png
+    cutscenePortrait: portraits/commanders/big/cherrystone_portrait
+    portraitOffset: [0, 20]
+    themeSong: music/hostile
+    skinColour: typeII
+    unitClassId: knight
+    dialogueBoxVoice: ui/dialogue/textScroll
+
+  - id: generic_villager
+    name: unit_class_name_villager
+    faction: cherrystone
+    playable: false
+    portrait:
+        extra: portraits/commanders/small/villager_felheim_portrait.png
+        happy: portraits/commanders/small/villager_portrait_happy.png
+        neutral: portraits/commanders/small/villager_portrait_small.png
+        sad: portraits/commanders/small/villager_portrait_sad.png
+    cutscenePortrait: portraits/commanders/big/cherrystone_portrait
+    portraitOffset: [0, 20]
+    themeSong: music/hostile
+    skinColour: typeII
+    unitClassId: knight
+    dialogueBoxVoice: ui/dialogue/textScroll
+    
 ...
