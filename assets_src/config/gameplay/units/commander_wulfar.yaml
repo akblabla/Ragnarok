@@ -102,7 +102,7 @@ units:
       positive: emote_positive
       negative: emote_negative
       laugh: emote_laugh
-      x: emote_crouching
+      crouching: emote_crouching
       looking: emote_looking
       grab: emote_grab
       carrying: emote_carrying
@@ -120,7 +120,6 @@ units:
       bush3: emote_bush3
       handshake_2: emote_handshake_2
       handshake_3: emote_handshake_3
-      hug: emote_hug
 
     shouts:
       wulfar_agreed: wulfar/wulfarShoutAgreed

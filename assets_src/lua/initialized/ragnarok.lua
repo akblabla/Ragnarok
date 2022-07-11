@@ -5,9 +5,6 @@ local Ragnarok = {}
 Ragnarok.seaTiles = {"sea","sea_alt", "ocean","reef"}
 Ragnarok.groundTags = {"type.ground.light", "type.ground.heavy"}
 function Ragnarok.init()
-	print("[Test data HEADER]")
-	print("PUT DATA HERE")
-	print("[Test data TAIL]")
 end
 
 local cantAttackBuildingsSet = {}
