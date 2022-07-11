@@ -121,6 +121,7 @@ units:
       vanish: emote_vanish
       seated: emote_seated
       dance: emote_dance
+      attack: attack
     shouts: 
       vesper_aurevoir: vesper/vesperShoutAuRevoir
       vesper_beautifullyappointed: vesper/vesperShoutBeautifullyAppointed
