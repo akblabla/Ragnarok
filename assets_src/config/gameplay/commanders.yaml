@@ -23,7 +23,6 @@ commanders:
     name: character_flagship_rival_name
     title: character_flagship_rival_title
     faction: outlaw
-    playable: false
     portrait:
       neutral: portraits/commanders/small/soldier_portrait_extra.png
       happy: portraits/commanders/small/soldier_portrait_extra.png
