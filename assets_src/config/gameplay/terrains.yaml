@@ -110,10 +110,8 @@ terrains:
   - id: wall
     name: terrain_name_wall
     defenceBonus: 0
-    movementCost:
-      flying: 1
+    movementCost: {}
     movementGroupType: land
-    cantStop: [flying]
     visionBlocking: true
     placeable: true
     tilesets:
@@ -138,7 +136,7 @@ terrains:
     movementGroupType: land
     placeable: true
     tilesets: 
-      0: plains
+      0: [plains, rough]
       1: [sea_alt, river]
       2: bridge
 

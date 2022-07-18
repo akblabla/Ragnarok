@@ -48,7 +48,7 @@ tilesets:
         infoScreenOffset: 80
         fillColour: '#6d5e56'
     primaryConnect: [undefined, wall, cave_wall]
-    decayTo: plains
+    decayTo: ":below"
     tiles:
       - { x: 0, y: 0, adj: "e s" }
       - { x: 1, y: 0, adj: "w e" }

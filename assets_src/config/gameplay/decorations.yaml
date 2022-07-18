@@ -66,5 +66,21 @@ decorations:
       ice: decoration/unit/pirateShipForeground
       desert: decoration/unit/pirateShipForeground
       volcano: decoration/unit/pirateShipForeground   
+  - id: NWCaveCorner
+    layer: ground
+    snapToGrid: true
+    animation:
+      grass: decoration/unit/NWCaveCorner
+      ice: decoration/unit/NWCaveCorner
+      desert: decoration/unit/NWCaveCorner
+      volcano: decoration/unit/NWCaveCorner   
+  - id: NECaveCorner
+    layer: ground
+    snapToGrid: true
+    animation:
+      grass: decoration/unit/NECaveCorner
+      ice: decoration/unit/NECaveCorner
+      desert: decoration/unit/NECaveCorner
+      volcano: decoration/unit/NECaveCorner
 
 ...

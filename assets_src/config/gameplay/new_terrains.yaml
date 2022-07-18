@@ -29,9 +29,7 @@ terrains:
     movementCost:
       walking: 1
       riding: 1
-      flying: 1
       hovering: 1
-      wheels: 3
       amphibious: 2
       land_building: 1
       indoor_building: 1
@@ -43,14 +41,13 @@ terrains:
   - id: cave_wall
     name: terrain_name_wall
     defenceBonus: 0
-    movementCost:
-      flying: 0
+    movementCost: {}
     movementGroupType: land
     visionBlocking: true
     placeable: true
     tilesets:
       0: [plains, rough]
-      2: cave_wall
+      1: cave_wall
       
   - id: slope
     name: terrain_name_wall

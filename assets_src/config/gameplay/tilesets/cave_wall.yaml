@@ -41,7 +41,7 @@ tilesets:
         infoScreenOffset: 80
         fillColour: '#596876'
     primaryConnect: [undefined, cave_wall, wall]
-    decayTo: rough
+    decayTo: ":below"
     tiles:
       - { x: 0, y: 0, adj: "e s se" }
       - { x: 1, y: 0, adj: "w sw s se e" }
@@ -112,4 +112,7 @@ tilesets:
       - { x: 1, y: 8, adj: "n w e s ne nw se sw" }
       - { x: 2, y: 8, adj: "n w e s ne nw se sw" }
       - { x: 3, y: 8, adj: "n w e s ne nw se sw" }
+      - { x: 4, y: 8, adj: "n w e s ne nw se sw" }
+      - { x: 5, y: 8, adj: "n w e s ne nw se sw" }
+      - { x: 6, y: 8, adj: "n w e s ne nw se sw" }
 ...

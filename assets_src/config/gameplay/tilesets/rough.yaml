@@ -5,7 +5,7 @@ tilesets:
     biomes:
       - types: [grass]
         spriteSheet: terrain_tilesets
-        spriteBase: grass_rough_tileset
+        spriteBase: grass_cave_tileset
         portraitSpriteSheet: terrain/terrain_portraits
         portraitSprite: terrain_portraits_city
         battleBackgroundSpriteSheet: backgrounds/grass_battlescreen_extendedbackgrounds
@@ -18,7 +18,7 @@ tilesets:
         
       - types: [desert]
         spriteSheet: terrain_tilesets
-        spriteBase: grass_rough_tileset
+        spriteBase: grass_cave_tileset
         portraitSpriteSheet: terrain/terrain_portraits
         portraitSprite: terrain_portraits_city
         battleBackgroundSpriteSheet: backgrounds/sand_battlescreen_extendedbackgrounds
@@ -30,7 +30,7 @@ tilesets:
         fillColour: '#807063'
       - types: [ice]
         spriteSheet: terrain_tilesets
-        spriteBase: grass_rough_tileset
+        spriteBase: grass_cave_tileset
         portraitSpriteSheet: terrain/terrain_portraits
         portraitSprite: terrain_portraits_city
         battleBackgroundSpriteSheet: backgrounds/snow_battlescreen_extendedbackgrounds

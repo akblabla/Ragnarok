@@ -54,7 +54,7 @@ tilesets:
         infoScreenOffset: 70
         fillColour: '#76231c'
     primaryConnect: [undefined, river, bridge, sea_alt, beach]
-    decayTo: plains
+    decayTo: ":below"
     tiles:
       - { x: 0, y: 0, adj: "e se s" }
       - { x: 1, y: 0, adj: "e se s sw w" }
