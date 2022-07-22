@@ -9,78 +9,74 @@ decorations:
   - id: shrub 
     layer: units
     animation:
-      grass: decoration/unit/shrub
-      ice: decoration/unit/shrub
-      desert: decoration/unit/shrub
-      volcano: decoration/unit/shrub    
+      undefined: decoration/unit/shrub    
   - id: shrub2 
     layer: units
     animation:
-      grass: decoration/unit/shrub2
-      ice: decoration/unit/shrub2
-      desert: decoration/unit/shrub2
-      volcano: decoration/unit/shrub2
+      undefined: decoration/unit/shrub2
   - id: shipExterior 
     layer: ground
     snapToGrid: true
     animation:
-      grass: decoration/unit/shipExterior
-      ice: decoration/unit/shipExterior
-      desert: decoration/unit/shipExterior
-      volcano: decoration/unit/shipExterior   
+      undefined: decoration/unit/shipExterior
   - id: shipForeground
     layer: units
     snapToGrid: true
     animation:
-      grass: decoration/unit/shipForeground
-      ice: decoration/unit/shipForeground
-      desert: decoration/unit/shipForeground
-      volcano: decoration/unit/shipForeground   
+      undefined: decoration/unit/shipForeground
   - id: shipBridge
     layer: units
     animation:
-      grass: decoration/unit/shipBridge
-      ice: decoration/unit/shipBridge
-      desert: decoration/unit/shipBridge
-      volcano: decoration/unit/shipBridge   
+      undefined: decoration/unit/shipBridge
   - id: solidBarrel
     layer: units
     animation:
-      grass: decoration/unit/solidBarrel
-      ice: decoration/unit/solidBarrel
-      desert: decoration/unit/solidBarrel
-      volcano: decoration/unit/solidBarrel   
+      undefined: decoration/unit/solidBarrel
   - id: pirateShipExterior
     layer: ground
     snapToGrid: true
     animation:
-      grass: decoration/unit/pirateShipExterior
-      ice: decoration/unit/pirateShipExterior
-      desert: decoration/unit/pirateShipExterior
-      volcano: decoration/unit/pirateShipExterior   
+      undefined: decoration/unit/pirateShipExterior
   - id: pirateShipForeground
     layer: units
     snapToGrid: true
     animation:
-      grass: decoration/unit/pirateShipForeground
-      ice: decoration/unit/pirateShipForeground
-      desert: decoration/unit/pirateShipForeground
-      volcano: decoration/unit/pirateShipForeground   
+      undefined: decoration/unit/pirateShipForeground
   - id: NWCaveCorner
     layer: ground
     snapToGrid: true
     animation:
-      grass: decoration/unit/NWCaveCorner
-      ice: decoration/unit/NWCaveCorner
-      desert: decoration/unit/NWCaveCorner
-      volcano: decoration/unit/NWCaveCorner   
+      undefined: decoration/unit/NWCaveCorner
   - id: NECaveCorner
     layer: ground
     snapToGrid: true
     animation:
-      grass: decoration/unit/NECaveCorner
-      ice: decoration/unit/NECaveCorner
-      desert: decoration/unit/NECaveCorner
-      volcano: decoration/unit/NECaveCorner
+      undefined: decoration/unit/NECaveCorner
+  - id: mountain_river01_cave
+    layer: ground
+    snapToGrid: true
+    snapOffset: [-5, 10]
+    animation:
+      undefined: decoration/water/mountainriver01_cave
+  - id: mountain_river01_cave_west
+    layer: ground
+    snapToGrid: true
+    snapOffset: [4, -3]
+    animation:
+      undefined: decoration/water/mountainriver01_cave_west
+  - id: mountain_river01_cave_east
+    layer: ground
+    snapToGrid: true
+    snapOffset: [13, -3]
+    animation:
+      undefined: decoration/water/mountainriver01_cave_east
+  - id: stalagmite01
+    layer: units
+    animation:
+      undefined: decoration/water/stalagmite01
+  - id: stalagmite02
+    layer: units
+    animation:
+      undefined: decoration/water/stalagmite02
 
 ...

@@ -3,7 +3,7 @@ local OldBuffs = require "wargroove/unit_buffs"
 
 local Buffs = {}
 function Buffs.init()
-	OldBuffs.getBuffs().crown = Buffs.crown
+--	OldBuffs.getBuffs().crown = Buffs.crown
 end
 function Buffs.crown(Wargroove, unit)
     if Wargroove.isSimulating() then

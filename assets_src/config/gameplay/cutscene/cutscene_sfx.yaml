@@ -3,7 +3,8 @@
 cutscene_sfx:
   - id: wulfar_hug
     path: cutscene/wulfarHug
-
+  - id: emeric_charged_attack
+    path: cutscene/emericChargedAttack
 
     # Normally HIDDEN
   - id: spell_binding

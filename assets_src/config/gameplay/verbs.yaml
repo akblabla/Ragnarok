@@ -17,6 +17,8 @@ verbs:
     name: ui_unit_verbs_pick_up_crown
     targetColour: target
     targetOutlineColour: target_outline
+    targetted: true
+    
     scriptName: verbs/pick_up_crown
     
   - id: hand_over_crown

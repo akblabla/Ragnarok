@@ -4,7 +4,7 @@
 en-GB:
   #AI
   ai_profile_rival_pirate: Rival Pirate
-
+  ai_profile_coward: Coward
 
   # Merge Verb
   ui_unit_verbs_better_merge: Merge
@@ -121,6 +121,10 @@ en-GB:
   trigger_action_name_gizmo_active_when_stood_on: "Gizmo: Activate when stood on"
   trigger_action_description_gizmo_active_when_stood_on: "Activate Gizmos at location when stood on."
   trigger_action_readable_gizmo_active_when_stood_on: "Activate Gizmos at location {0} if a unit or crown stands on them."
+  
+  trigger_action_name_gizmo_toggle_when_stood_on: "Gizmo: Toggle when stood on"
+  trigger_action_description_gizmo_toggle_when_stood_on: "Gizmos toggle at location when stood on."
+  trigger_action_readable_gizmo_toggle_when_stood_on: "Gizmos toggle when unit moves to location {0}."
   
   trigger_action_name_invert_gizmo: "Gizmo: Invert Active State"
   trigger_action_description_invert_gizmo: "Invert active states of gizmos."

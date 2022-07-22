@@ -33,15 +33,15 @@ actions:
   - type: play
     clips: [ sfx/cutscene/land.ogg]
     group: sfx
-    delay: 0.8
+    delay: 0.7
   - type: play
     clips: [ sfx/vesper/vesperHit5.ogg]
     group: sfx
     volume: 0.8
-    delay: 0.85
+    delay: 0.75
   - type: play
     clips: [ sfx/vesper/vesperAttackWhipUncoilFoley.ogg]
     group: sfx
-    delay: 0.85
+    delay: 0.75
     
 ...

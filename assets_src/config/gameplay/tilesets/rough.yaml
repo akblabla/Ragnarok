@@ -8,9 +8,9 @@ tilesets:
         spriteBase: grass_cave_tileset
         portraitSpriteSheet: terrain/terrain_portraits
         portraitSprite: terrain_portraits_city
-        battleBackgroundSpriteSheet: backgrounds/grass_battlescreen_extendedbackgrounds
-        battleBackgroundSprite: grass_battlescreen_extendedbackgrounds_mountain
-        battleBackgroundSpriteForeground: grass_battlescreen_extendedbackgrounds_mountain_foreground
+        battleBackgroundSpriteSheet: backgrounds/map_backgrounds_RagnarokMod
+        battleBackgroundSprite: cave_battlescreen_sand_background
+        battleBackgroundSpriteForeground: cave_battlescreen_sand_foreground
         iconSpriteSheet: ui_RagnarokMod
         iconSprite: ":img:ui/codex/icons/icon_terrain_rough_grass.png"
         infoScreenOffset: 80
@@ -21,9 +21,9 @@ tilesets:
         spriteBase: grass_cave_tileset
         portraitSpriteSheet: terrain/terrain_portraits
         portraitSprite: terrain_portraits_city
-        battleBackgroundSpriteSheet: backgrounds/sand_battlescreen_extendedbackgrounds
-        battleBackgroundSprite: sand_battlescreen_extendedbackgrounds_mountain
-        battleBackgroundSpriteForeground: sand_battlescreen_extendedbackgrounds_mountain_foreground
+        battleBackgroundSpriteSheet: backgrounds/map_backgrounds_RagnarokMod
+        battleBackgroundSprite: cave_battlescreen_sand_background
+        battleBackgroundSpriteForeground: cave_battlescreen_sand_foreground
         iconSpriteSheet: ui_RagnarokMod
         iconSprite: ":img:ui/codex/icons/icon_terrain_rough_grass.png"
         infoScreenOffset: 80
@@ -33,9 +33,9 @@ tilesets:
         spriteBase: grass_cave_tileset
         portraitSpriteSheet: terrain/terrain_portraits
         portraitSprite: terrain_portraits_city
-        battleBackgroundSpriteSheet: backgrounds/snow_battlescreen_extendedbackgrounds
-        battleBackgroundSprite: snow_battlescreen_extendedbackgrounds_mountain
-        battleBackgroundSpriteForeground: snow_battlescreen_extendedbackgrounds_mountain_foreground
+        battleBackgroundSpriteSheet: backgrounds/map_backgrounds_RagnarokMod
+        battleBackgroundSprite: cave_battlescreen_sand_background
+        battleBackgroundSpriteForeground: cave_battlescreen_sand_foreground
         iconSpriteSheet: ui_RagnarokMod
         iconSprite: ":img:ui/codex/icons/icon_terrain_rough_grass.png"
         infoScreenOffset: 80

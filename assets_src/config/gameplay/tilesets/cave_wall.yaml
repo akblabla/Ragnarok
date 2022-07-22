@@ -3,43 +3,18 @@ tilesets:
   - id: cave_wall
     decayTo: plains
     biomes:
-      - types: [grass]
+      - types: [grass, ice, desert, volcano]
         spriteSheet: terrain_tilesets
         spriteBase: grass_cave_wall_tileset
         portraitSpriteSheet: terrain/terrain_portraits
         portraitSprite: terrain_portraits_city
-        battleBackgroundSpriteSheet: backgrounds/grass_battlescreen_extendedbackgrounds
-        battleBackgroundSprite: grass_battlescreen_extendedbackgrounds_mountain
-        battleBackgroundSpriteForeground: grass_battlescreen_extendedbackgrounds_mountain_foreground
+        battleBackgroundSpriteSheet: backgrounds/map_backgrounds_RagnarokMod
+        battleBackgroundSprite: cave_battlescreen_sand_background
+        battleBackgroundSpriteForeground: cave_battlescreen_sand_foreground
         iconSpriteSheet: ui_RagnarokMod
         iconSprite: ":img:ui/codex/icons/icon_terrain_rough_grass.png"
         infoScreenOffset: 80
         fillColour: '#83786e'
-        
-      - types: [desert]
-        spriteSheet: terrain_tilesets
-        spriteBase: grass_cave_wall_tileset
-        portraitSpriteSheet: terrain/terrain_portraits
-        portraitSprite: terrain_portraits_city
-        battleBackgroundSpriteSheet: backgrounds/sand_battlescreen_extendedbackgrounds
-        battleBackgroundSprite: sand_battlescreen_extendedbackgrounds_mountain
-        battleBackgroundSpriteForeground: sand_battlescreen_extendedbackgrounds_mountain_foreground
-        iconSpriteSheet: ui_RagnarokMod
-        iconSprite: ":img:ui/codex/icons/icon_terrain_rough_grass.png"
-        infoScreenOffset: 80
-        fillColour: '#807063'
-      - types: [ice]
-        spriteSheet: terrain_tilesets
-        spriteBase: grass_cave_wall_tileset
-        portraitSpriteSheet: terrain/terrain_portraits
-        portraitSprite: terrain_portraits_city
-        battleBackgroundSpriteSheet: backgrounds/snow_battlescreen_extendedbackgrounds
-        battleBackgroundSprite: snow_battlescreen_extendedbackgrounds_mountain
-        battleBackgroundSpriteForeground: snow_battlescreen_extendedbackgrounds_mountain_foreground
-        iconSpriteSheet: ui_RagnarokMod
-        iconSprite: ":img:ui/codex/icons/icon_terrain_rough_grass.png"
-        infoScreenOffset: 80
-        fillColour: '#596876'
     primaryConnect: [undefined, cave_wall, wall]
     decayTo: ":below"
     tiles:

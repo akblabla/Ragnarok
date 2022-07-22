@@ -13,6 +13,7 @@ local crownID = {}
 local crownPos = {}
 local crownBearerID = {}
 local crownAnimation = "ui/icons/fx_crown"
+local crownOffsetAnimation = "ui/icons/fx_crown_offset"
 local crownStateKey = "crown"
 
 function Ragnarok.addAIToCantAttackBuildings(playerId)
@@ -71,31 +72,41 @@ function Ragnarok.removeCrown()
 		crown.health = 0
 		Wargroove.updateUnit(crown)
 	end
-	local crownBearer = Wargroove.getUnitById(crownBearerID)
-	if crownBearer ~= nil then
-		for i, _stateKey in ipairs(crownBearer.state) do
-			if (_stateKey.key == crownStateKey) then
-				_stateKey.value = nil
-				_stateKey.key = nil
-				_stateKey = nil
+	if crownBearerID then
+		local crownBearer = Wargroove.getUnitById(crownBearerID)
+		if crownBearer ~= nil then
+			for i, _stateKey in ipairs(crownBearer.state) do
+				if (_stateKey.key == crownStateKey) then
+					_stateKey.value = nil
+					_stateKey.key = nil
+					_stateKey = nil
+				end
 			end
-		end
 
-		if Wargroove.hasUnitEffect(crownBearer.id, crownAnimation) then
-			Wargroove.deleteUnitEffectByAnimation(crownBearer.id, crownAnimation)
+			if Wargroove.hasUnitEffect(crownBearer.id, crownAnimation) then
+				Wargroove.deleteUnitEffectByAnimation(crownBearer.id, crownAnimation)
+			end
+			Wargroove.updateUnit(crownBearer)
 		end
-		Wargroove.updateUnit(crownBearer)
 	end
 end
 
 function Ragnarok.dropCrown(playerId,targetPos)
+	print("dropping Crown function starts here")
 	Ragnarok.removeCrown()
-	local startingState = {}
-    local pos = {key = "pos", value = "" .. targetPos.x .. "," .. targetPos.y}
-    table.insert(startingState, pos)
-	crownID = Wargroove.spawnUnit(playerId, {x = -100, y = -100}, "crown", false, "", startingState)
+	print("removed Crown")
+	--local startingState = {}
+    --local pos = {key = "pos", value = "" .. targetPos.x .. "," .. targetPos.y}
+    --table.insert(startingState, pos)
+	crownID = Wargroove.spawnUnit(playerId, {x = targetPos.x-100, y = targetPos.y-100}, "crown", false)
+	print("Spawned Crown")
+	Wargroove.spawnUnitEffect(crownID, crownOffsetAnimation, "idle", startAnimation, true, false)
+	print("Added Crown Effect")
+	
 	crownPos = targetPos
+	print("Crown Position updated")
 	crownBearerID = nil
+	print("Nobody is carrying the crown anymore")
 	return crownID
 end
 
@@ -118,8 +129,27 @@ end
 local activator = {}
 local invertedGizmos = {}
 
-local gizmoSoundMapOn = {["pressure_plate"] = "cutscene/stoneScrape1",["drawbridge_left"] = "cutscene/drawbridgeDrop",["drawbridge_right"] = "cutscene/drawbridgeDrop",["drawbridge_top"] = "cutscene/drawbridgeDrop",["drawbridge_down"] = "cutscene/drawbridgeDrop"}
-local gizmoSoundMapOff = {["pressure_plate"] = "cutscene/stoneScrape2",["drawbridge_left"] = "cutscene/drawbridgeRaise",["drawbridge_right"] = "cutscene/drawbridgeRaise",["drawbridge_top"] = "cutscene/drawbridgeRaise",["drawbridge_down"] = "cutscene/drawbridgeRaise"}
+local gizmoSoundMapOn = {
+	["pressure_plate"] = "cutscene/stoneScrape1",
+	["drawbridge_left"] = "cutscene/drawbridgeDrop",
+	["drawbridge_right"] = "cutscene/drawbridgeDrop",
+	["drawbridge_top"] = "cutscene/drawbridgeDrop",
+	["drawbridge_down"] = "cutscene/drawbridgeDrop",
+	["lever"] = "switch",
+	["broken_wall"] = "strongholdDieRed",
+	["broken_wall_vertical"] = "strongholdDieRed"
+}
+local gizmoSoundMapOff = {
+	["pressure_plate"] = "cutscene/stoneScrape2",
+	["drawbridge_left"] = "cutscene/drawbridgeRaise",
+	["drawbridge_right"] = "cutscene/drawbridgeRaise",
+	["drawbridge_top"] = "cutscene/drawbridgeRaise",
+	["drawbridge_down"] = "cutscene/drawbridgeRaise",
+	["lever"] = "switch"
+}
+
+-- local gizmoSoundMapOn = {["pressure_plate"] = "cutscene/stoneScrape1",["drawbridge_left"] = "cutscene/drawbridgeDrop",["drawbridge_right"] = "cutscene/drawbridgeDrop",["drawbridge_top"] = "cutscene/drawbridgeDrop",["drawbridge_down"] = "cutscene/drawbridgeDrop"}
+-- local gizmoSoundMapOff = {["pressure_plate"] = "cutscene/stoneScrape2",["drawbridge_left"] = "cutscene/drawbridgeRaise",["drawbridge_right"] = "cutscene/drawbridgeRaise",["drawbridge_top"] = "cutscene/drawbridgeRaise",["drawbridge_down"] = "cutscene/drawbridgeRaise"}
 
 function Ragnarok.setState(gizmo, state, playSound)
 	if playSound == nil then playSound = true end
@@ -181,8 +211,9 @@ function Ragnarok.setStates(gizmos, state, playSound)
 end
 
 function Ragnarok.setActivator(gizmo,state)
-    activator[gizmo] = true
-	if state == false then activator[gizmo] = nil end
+	local key = Ragnarok.generateGizmoKey(gizmo)
+    activator[key] = true
+	if state == false then activator[key] = nil end
 end
 
 function Ragnarok.invertGizmo(gizmo)
@@ -203,7 +234,8 @@ function Ragnarok.generateGizmoKey(gizmo)
 end
 
 function Ragnarok.isActivator(gizmo)
-	return activator[gizmo] == true
+	local key = Ragnarok.generateGizmoKey(gizmo)
+	return activator[key] == true
 end
 
 function dump(o,level)

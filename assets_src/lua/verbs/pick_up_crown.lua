@@ -7,6 +7,7 @@ local handOverCrown = Verb:new()
 local stateKey = "crown"
 
 function handOverCrown:getMaximumRange(unit, endPos)
+	if unit.unitClass.id == "commander_vesper" then return 2 end
     return 1
 end
 

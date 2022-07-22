@@ -36,6 +36,10 @@ triggerActions:
     parameters:
       - type: location_star
 
+  - id: gizmo_toggle_when_stood_on
+    parameters:
+      - type: location_star
+
   - id: invert_gizmo
     parameters:
       - type: location_star

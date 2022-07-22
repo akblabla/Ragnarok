@@ -19,6 +19,7 @@ function Actions.populate(dst)
 	dst["give_crown"] = Actions.giveCrown
 	dst["link_gizmo_state_with_activators"] = Actions.linkGizmoStateWithActivators
 	dst["gizmo_active_when_stood_on"] = Actions.gizmoActiveWhenStoodOn
+	dst["gizmo_toggle_when_stood_on"] = Actions.gizmoToggleStateWhenMovedTo
 	dst["invert_gizmo"] = Actions.invertGizmo
 	dst["set_threat_at_location"] = Actions.setThreatAtLocation
 	dst["spawn_unit"] = Actions.spawnUnit
@@ -149,6 +150,35 @@ function Actions.gizmoActiveWhenStoodOn(context)
 		local isCrown = crownPos and (crownPos.x == gizmo.pos.x) and (crownPos.y == gizmo.pos.y)
 		local isPressed = isCrown or unit ~= nil
 		Ragnarok.setState(gizmo,isPressed)
+    end
+
+end
+
+local toggleClear = {}
+
+function Actions.gizmoToggleStateWhenMovedTo(context)
+    -- "Gizmos toggle when unit moves to location {0}."
+	local location = context:getLocation(0)
+	--local lastMovePathLocation =  Wargroove.getLocationById(4)
+	local lastUnitUsedLocation =  Wargroove.getLocationById(-5)
+    for i, gizmo in ipairs(Wargroove.getGizmosAtLocation(location)) do
+		if toggleClear[Ragnarok.generateGizmoKey(gizmo)] == nil then
+			toggleClear[Ragnarok.generateGizmoKey(gizmo)] = Wargroove.getUnitAt(gizmo.pos) == nil
+		end
+		Ragnarok.setActivator(gizmo, true)
+		local atPath = false
+		local lastUnitUsed = nil
+		for i, gizmoAtPath in ipairs(Wargroove.getGizmosAtLocation(lastUnitUsedLocation)) do
+			if Ragnarok.generateGizmoKey(gizmoAtPath) == Ragnarok.generateGizmoKey(gizmo) then
+				atPath = true
+				lastUnitUsed = Wargroove.getUnitAt(gizmoAtPath.pos)
+				break
+			end
+		end
+		if lastUnitUsed ~= nil and toggleClear[Ragnarok.generateGizmoKey(gizmo)] ~= (Wargroove.getUnitAt(gizmo.pos) == nil) then
+			Ragnarok.setState(gizmo,not Ragnarok.getGizmoState(gizmo))
+		end
+		toggleClear[Ragnarok.generateGizmoKey(gizmo)] = Wargroove.getUnitAt(gizmo.pos) == nil
     end
 
 end
