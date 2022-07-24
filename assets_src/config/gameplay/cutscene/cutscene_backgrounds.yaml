@@ -250,6 +250,10 @@ cutscene_backgrounds:
     spritesheet: backgrounds/map_backgrounds_RagnarokMod
     foreground: outlaw_and_cherrystone_ship_foreground
     background: outlaw_and_cherrystone_ship_background
+  - id: sand_cave
+    spritesheet: backgrounds/map_backgrounds_RagnarokMod
+    foreground: cave_battlescreen_sand_foreground
+    background: cave_battlescreen_sand_background
   - id: sand_forest_edited
     hidden: true
     spritesheet: backgrounds/sand_battlescreen_extendedbackgrounds

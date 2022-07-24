@@ -78,5 +78,9 @@ decorations:
     layer: units
     animation:
       undefined: decoration/water/stalagmite02
+  - id: stalagmite_stalactite01
+    layer: units
+    animation:
+      undefined: decoration/water/stalagmiteStalactite01
 
 ...
